@@ -1,0 +1,9 @@
+h1 {
+  font-size: 2rem;
+}
+
+.inputs {
+  display: flex;
+  flex-direction: column;
+  gap: 28px;
+}
