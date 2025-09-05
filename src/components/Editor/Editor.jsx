@@ -1,12 +1,34 @@
-import { PersonalInformation } from "../PersonalInformation/PersonalInformation"
+import { useState } from "react";
 
-export function Editor({ curriculumInformation, setCurriculumInformation }) {
+import { PersonalInformation } from "../PersonalInformation";
+import { EducationSection } from "../EducationSection";
+import { ExperienceSection } from "../ExperienceSection";
+
+export function Editor({ curriculum, setCurriculum }) {
+  const [activeIndex, setActiveIndex] = useState(null);
+
   return (
     <div>
       {/* <Button title="Clear Resume" />
       <Button title="Load Sample" /> */}
 
-      <PersonalInformation curriculumInformation={curriculumInformation} setCurriculumInformation={setCurriculumInformation} />
+      <PersonalInformation
+        curriculum={curriculum}
+        setCurriculum={setCurriculum}
+      />
+
+      <EducationSection
+        curriculum={curriculum}
+        setCurriculum={setCurriculum}
+        isOpen={activeIndex === 0}
+        onToggle={() => setActiveIndex(activeIndex === 0 ? null : 0)}
+      />
+      {/* <ExperienceSection
+        curriculum={curriculum}
+        setCurriculum={setCurriculum}
+        isOpen={activeIndex === 1}
+        onToggle={() => setActiveIndex(activeIndex === 1 ? null : 1)}
+      /> */}
     </div>
-  )
+  );
 }

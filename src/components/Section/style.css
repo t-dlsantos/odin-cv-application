@@ -1,0 +1,44 @@
+.section {
+  width: 100%;
+}
+
+.expand-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.name-container {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.name-container h2 {
+  font-size: 1.25rem;
+}
+
+.chevron {
+  transition: transform 0.3s ease;
+}
+
+.chevron.open {
+  transform: rotate(180deg);
+}
+
+.section-item {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 0;
+  cursor: pointer;
+}
+
+.add-item {
+  display: flex;
+  font-size: 12px;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+}

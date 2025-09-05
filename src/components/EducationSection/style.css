@@ -1,0 +1,21 @@
+.basic-information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.educations-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.edu-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-actions {
+  display:  flex;
+  gap: 8px;
+}

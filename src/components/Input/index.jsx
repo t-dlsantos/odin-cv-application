@@ -1,4 +1,4 @@
-import './Input.css';
+import './style.css';
 
 export function Input({ type = "text", id, label, placeholder, onChange, value }) {
   return (
