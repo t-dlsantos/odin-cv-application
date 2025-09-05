@@ -2,7 +2,6 @@ const parseFromIsoToDateString = (dateInIsoFormat) => {
   if (dateInIsoFormat === "current") {
     return "current";
   }
-  console.log(dateInIsoFormat)
   const date = new Date(dateInIsoFormat);
 
   const mesAno = date.toLocaleDateString("en-US", {

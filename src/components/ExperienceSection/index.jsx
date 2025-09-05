@@ -78,10 +78,12 @@ export function ExperienceSection({
               </div>
             </div>
           ))}
-          <button type="button" className="add-item" onClick={handleAdd}>
-            <Plus />
-            <p>Add Experience</p>
-          </button>
+          <Button 
+            onClick={handleAdd}
+            icon={Plus}
+            text="Add Education"
+            color="transparent"
+          />
         </div>
       )}
     </Section>

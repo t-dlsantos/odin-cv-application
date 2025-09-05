@@ -1,9 +1,16 @@
-export function Button({ color = "#1a1a1a", onClick, icon: Icon }) {
+import "./style.css";
 
+export function Button({ color = "#303030ff", onClick, icon: Icon,  text = ""}) {
   return (
-    <button onClick={onClick} style={{ backgroundColor: color }}>
-      <Icon size={18}/>
+    <button className="button" onClick={onClick} style={{ backgroundColor: color }}>
+      {
+        Icon !== undefined &&
+        <Icon size={18} />
+      }
+      {
+        text.length > 0 &&
+        <p>{text}</p>
+      }
     </button>
   );
-
 }

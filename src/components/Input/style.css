@@ -7,7 +7,7 @@
 
 .label {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: 1rem;
 }
 
 .input {
@@ -16,7 +16,7 @@
   border-radius: 4px;
   background-color: #2e2e2e;
   border: none;
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
 
 .input:focus {

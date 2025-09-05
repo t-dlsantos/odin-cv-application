@@ -1,5 +1,13 @@
+.personal-information {
+  border-radius: 8px;
+  padding: 20px;
+  border: solid 2px rgb(43, 43, 43);
+}
+
 h1 {
-  font-size: 2rem;
+  text-align: start;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
 }
 
 .inputs {

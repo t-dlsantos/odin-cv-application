@@ -11,7 +11,7 @@ export function PersonalInformation({ curriculum, setCurriculum }) {
   };
 
   return (
-    <div>
+    <div className="personal-information">
       <h1>Personal Information</h1>
       <div className="inputs">
         <Input

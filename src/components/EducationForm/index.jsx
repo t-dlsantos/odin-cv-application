@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { Input } from "../Input";
 import "./style.css";
+import { Button } from "../Button";
+import { Check } from "lucide-react";
 
 export function EducationForm({ initialData, onSave, onCancel }) {
   const [form, setForm] = useState(initialData);
@@ -41,32 +43,35 @@ export function EducationForm({ initialData, onSave, onCancel }) {
         value={form.degree}
         onChange={handleChange}
       />
-      <Input
-        id="start_date"
-        label="Start Date"
-        type="date"
-        value={form.start_date}
-        onChange={handleChange}
-      />
-      <div className="current-job">
-        <p>Current job?</p>
-        <input
-          type="checkbox"
-          id="end_date"
-          checked={isCurrentJob}
-          onChange={handleCheckboxChange}
-        />
-      </div>
-
-      {!isCurrentJob && (
+      <div className="date-section">
         <Input
-          id="end_date"
-          label="End Date"
+          id="start_date"
+          label="Start Date"
           type="date"
-          value={form.end_date}
+          value={form.start_date}
           onChange={handleChange}
         />
-      )}
+    
+          {!isCurrentJob && (
+            <Input
+              id="end_date"
+              label="End Date"
+              type="date"
+              value={form.end_date}
+              onChange={handleChange}
+            />
+          )}
+          <div className="current-job">
+            <input
+              type="checkbox"
+              id="end_date"
+              checked={isCurrentJob}
+              onChange={handleCheckboxChange}
+            />
+            <p>Current Studying?</p>
+          </div>
+      </div>
+
       <Input
         id="location"
         label="Location"
@@ -75,10 +80,16 @@ export function EducationForm({ initialData, onSave, onCancel }) {
       />
 
       <div className="actions">
-        <button type="button" onClick={onCancel}>
-          Cancel
-        </button>
-        <button type="submit">Save</button>
+        <Button
+          onClick={onCancel}
+          text="Cancel"
+        />
+        <Button 
+          onClick={onSave}
+          text="Save"
+          icon={Check}
+          color="#646cff"
+        />
       </div>
     </form>
   );

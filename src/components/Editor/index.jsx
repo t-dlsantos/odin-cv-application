@@ -18,18 +18,20 @@ export function Editor({ curriculum, setCurriculum }) {
         setCurriculum={setCurriculum}
       />
 
-      <EducationSection
-        curriculum={curriculum}
-        setCurriculum={setCurriculum}
-        isOpen={activeIndex === 0}
-        onToggle={() => setActiveIndex(activeIndex === 0 ? null : 0)}
-      />
-      <ExperienceSection
-        curriculum={curriculum}
-        setCurriculum={setCurriculum}
-        isOpen={activeIndex === 1}
-        onToggle={() => setActiveIndex(activeIndex === 1 ? null : 1)}
-      />
+      <div className="sections">
+        <EducationSection
+          curriculum={curriculum}
+          setCurriculum={setCurriculum}
+          isOpen={activeIndex === 0}
+          onToggle={() => setActiveIndex(activeIndex === 0 ? null : 0)}
+        />
+        <ExperienceSection
+          curriculum={curriculum}
+          setCurriculum={setCurriculum}
+          isOpen={activeIndex === 1}
+          onToggle={() => setActiveIndex(activeIndex === 1 ? null : 1)}
+        />
+      </div>
     </div>
   );
 }
