@@ -16,7 +16,7 @@ const information = {
   experience: [
     {
       id: 1,
-      name: "CBA",
+      company_name: "CBA",
       position: "Estagiário PCP & Gestão",
       start_date: "01/03/2024",
       end_date: "05/06/2025",

@@ -23,12 +23,12 @@ export function Editor({ curriculum, setCurriculum }) {
         isOpen={activeIndex === 0}
         onToggle={() => setActiveIndex(activeIndex === 0 ? null : 0)}
       />
-      {/* <ExperienceSection
+      <ExperienceSection
         curriculum={curriculum}
         setCurriculum={setCurriculum}
         isOpen={activeIndex === 1}
         onToggle={() => setActiveIndex(activeIndex === 1 ? null : 1)}
-      /> */}
+      />
     </div>
   );
 }

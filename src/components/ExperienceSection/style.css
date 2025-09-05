@@ -1,0 +1,21 @@
+.basic-information {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.experiences-container {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.exp-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item-actions {
+  display:  flex;
+  gap: 8px;
+}
