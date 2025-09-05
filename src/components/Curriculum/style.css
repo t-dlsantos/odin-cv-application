@@ -11,7 +11,7 @@
   justify-content: center;
   gap: 12px;
   height: 140px;
-  background-color: rgb(110, 110, 161);
+  background-color: rgb(75, 75, 153);
 }
 
 .curriculum-container h1 {
@@ -27,4 +27,43 @@
 .header .contact div {
   display: flex;
   gap: 2px;
+}
+
+.curriculum-container .content {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding: 40px;
+  color: black;
+}
+
+.curriculum-container .education h2,
+.curriculum-container .experience h2 {
+  font-size: 0.9rem;
+  margin-bottom: 14px;
+}
+
+.education .items,
+.experience .items {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.content .education .info,
+.content .experience .info {
+  display: flex;
+  font-size: 0.8rem;
+  gap: 16px;
+}
+
+.left,
+.right {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.name {
+  font-weight: 700;
 }
