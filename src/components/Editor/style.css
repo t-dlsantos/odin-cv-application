@@ -2,6 +2,12 @@
   flex: 1;
 }
 
+.edition-action {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+}
+
 .sections {
   display: flex;
   flex-direction: column;

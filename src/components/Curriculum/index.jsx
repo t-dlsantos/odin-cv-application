@@ -8,18 +8,24 @@ export function Curriculum({ curriculum }) {
       <div className="header">
         <h1>{curriculum.full_name}</h1>
         <div className="contact">
-          <div>
-            <Mail size={14} />
-            {curriculum.email}
-          </div>
-          <div>
-            <Phone size={14} />
-            {curriculum.phone_number}
-          </div>
-          <div>
-            <MapPin size={14} />
-            {curriculum.address}
-          </div>
+          {curriculum.email.length > 0 && (
+            <div>
+              <Mail size={14} />
+              {curriculum.email}
+            </div>
+          )}
+          {curriculum.phone_number.length > 0 && (
+            <div>
+              <Phone size={14} />
+              {curriculum.phone_number}
+            </div>
+          )}
+          {curriculum.address.length > 0 && (
+            <div>
+              <MapPin size={14} />
+              {curriculum.address}
+            </div>
+          )}
         </div>
       </div>
       <div className="content">
@@ -31,7 +37,8 @@ export function Curriculum({ curriculum }) {
                 <div className="info" key={edu.id}>
                   <div className="left">
                     <p>
-                      {parseFromIsoToDateString(edu.start_date)} - {parseFromIsoToDateString(edu.end_date)}
+                      {parseFromIsoToDateString(edu.start_date)} -{" "}
+                      {parseFromIsoToDateString(edu.end_date)}
                     </p>
                     <p>{edu.location}</p>
                   </div>
@@ -52,7 +59,8 @@ export function Curriculum({ curriculum }) {
                 <div className="info" key={exp.id}>
                   <div className="left">
                     <p>
-                      {parseFromIsoToDateString(exp.start_date)} - {parseFromIsoToDateString(exp.end_date)}
+                      {parseFromIsoToDateString(exp.start_date)} -{" "}
+                      {parseFromIsoToDateString(exp.end_date)}
                     </p>
                     <p>{exp.location}</p>
                   </div>

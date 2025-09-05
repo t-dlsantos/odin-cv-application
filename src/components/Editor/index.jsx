@@ -4,14 +4,39 @@ import "./style.css";
 import { PersonalInformation } from "../PersonalInformation";
 import { EducationSection } from "../EducationSection";
 import { ExperienceSection } from "../ExperienceSection";
+import { Button } from "../Button";
+import { LoaderCircle, Trash } from "lucide-react";
+import {
+  cleanedInformation,
+  loadExample,
+} from "../../utils/curriculumInformation";
 
 export function Editor({ curriculum, setCurriculum }) {
   const [activeIndex, setActiveIndex] = useState(null);
 
+  const handleLoadSampe = () => {
+    setCurriculum(loadExample());
+  };
+
+  const handleCleanResume = () => {
+    setCurriculum(cleanedInformation());
+  };
+
   return (
     <div className="editor-container">
-      {/* <Button title="Clear Resume" />
-      <Button title="Load Sample" /> */}
+      <div className="edition-action ">
+        <Button
+          text="Clear Resume"
+          icon={Trash}
+          color="red"
+          onClick={handleCleanResume}
+        />
+        <Button
+          text="Load Sample"
+          icon={LoaderCircle}
+          onClick={handleLoadSampe}
+        />
+      </div>
 
       <PersonalInformation
         curriculum={curriculum}

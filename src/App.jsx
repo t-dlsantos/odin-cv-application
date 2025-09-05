@@ -2,7 +2,7 @@ import { useState } from 'react';
 import './App.css';
 import { Editor } from './components/Editor';
 
-import { information, loadExample } from './utils/curriculumInformation';
+import { information } from './utils/curriculumInformation';
 import { Curriculum } from './components/Curriculum';
 
 function App() {

@@ -38,7 +38,10 @@ export function EducationSection({
     } else {
       setCurriculum({
         ...curriculum,
-        education: [...curriculum.education, { ...data, id: Date.now() }],
+        education: [
+          ...curriculum.education,
+          { ...data, id: crypto.randomUUID() },
+        ],
       });
     }
     setEditingItem(null);
@@ -69,16 +72,22 @@ export function EducationSection({
           {curriculum.education.map((edu) => (
             <div className="edu-container">
               <div className="basic-information">
-                <span><b>{edu.degree}</b></span>
+                <span>
+                  <b>{edu.degree}</b>
+                </span>
                 <span>{edu.school_name}</span>
               </div>
               <div className="item-actions">
-                <Button icon={PenBox} onClick={() => setEditingItem(edu)}/>
-                <Button icon={Trash} color="red" onClick={() => handleDelete(edu.id)}/>
+                <Button icon={PenBox} onClick={() => setEditingItem(edu)} />
+                <Button
+                  icon={Trash}
+                  color="red"
+                  onClick={() => handleDelete(edu.id)}
+                />
               </div>
             </div>
           ))}
-          <Button 
+          <Button
             onClick={handleAdd}
             icon={Plus}
             text="Add Education"

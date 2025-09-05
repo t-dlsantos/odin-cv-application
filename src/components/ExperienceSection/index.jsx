@@ -38,7 +38,7 @@ export function ExperienceSection({
     } else {
       setCurriculum({
         ...curriculum,
-        experience: [...curriculum.experience, { ...data, id: Date.now() }],
+        experience: [...curriculum.experience, { ...data, id: crypto.randomUUID() }],
       });
     }
     setEditingItem(null);
