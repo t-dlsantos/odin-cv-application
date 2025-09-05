@@ -18,8 +18,8 @@ const information = {
       id: 1,
       company_name: "CBA",
       position: "Estagiário PCP & Gestão",
-      start_date: "01/03/2024",
-      end_date: "05/06/2025",
+      start_date: "2024-03-01",
+      end_date: "2025-06-05",
       location: "Alumínio"
     }
   ]

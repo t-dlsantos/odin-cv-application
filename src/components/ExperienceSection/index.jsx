@@ -73,7 +73,7 @@ export function ExperienceSection({
                 <span>{exp.company_name}</span>
               </div>
               <div className="item-actions">
-                <Button icon={PenBox} onClick={() => setEditingItem(edu)}/>
+                <Button icon={PenBox} onClick={() => setEditingItem(exp)}/>
                 <Button icon={Trash} color="red" onClick={() => handleDelete(exp.id)}/>
               </div>
             </div>

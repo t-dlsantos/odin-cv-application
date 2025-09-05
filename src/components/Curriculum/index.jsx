@@ -1,5 +1,6 @@
 import { Mail, MapPin, Phone } from "lucide-react";
 import "./style.css";
+import { parseFromIsoToDateString } from "../../utils/dateParser";
 
 export function Curriculum({ curriculum }) {
   return (
@@ -27,10 +28,10 @@ export function Curriculum({ curriculum }) {
             <h2>Education</h2>
             <div className="items">
               {curriculum.education.map((edu) => (
-                <div className="info">
+                <div className="info" key={edu.id}>
                   <div className="left">
                     <p>
-                      {edu.start_date} - {edu.end_date}
+                      {parseFromIsoToDateString(edu.start_date)} - {parseFromIsoToDateString(edu.end_date)}
                     </p>
                     <p>{edu.location}</p>
                   </div>
@@ -48,10 +49,10 @@ export function Curriculum({ curriculum }) {
             <h2>Experience</h2>
             <div className="items">
               {curriculum.experience.map((exp) => (
-                <div className="info">
+                <div className="info" key={exp.id}>
                   <div className="left">
                     <p>
-                      {exp.start_date} - {exp.end_date}
+                      {parseFromIsoToDateString(exp.start_date)} - {parseFromIsoToDateString(exp.end_date)}
                     </p>
                     <p>{exp.location}</p>
                   </div>

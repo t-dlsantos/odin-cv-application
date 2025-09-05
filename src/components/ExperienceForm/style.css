@@ -12,3 +12,8 @@
 .actions .right {
   display: flex;
 }
+
+.current-job {
+  display: flex;
+  gap: 12px;
+}
