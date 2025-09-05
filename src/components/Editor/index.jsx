@@ -1,4 +1,5 @@
 import { useState } from "react";
+import "./style.css";
 
 import { PersonalInformation } from "../PersonalInformation";
 import { EducationSection } from "../EducationSection";
@@ -8,7 +9,7 @@ export function Editor({ curriculum, setCurriculum }) {
   const [activeIndex, setActiveIndex] = useState(null);
 
   return (
-    <div>
+    <div className="editor-container">
       {/* <Button title="Clear Resume" />
       <Button title="Load Sample" /> */}
 

@@ -1,0 +1,30 @@
+.curriculum-container {
+  width: 595px;
+  height: 842px;
+  background-color: white;
+}
+
+.curriculum-container .header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  height: 140px;
+  background-color: rgb(110, 110, 161);
+}
+
+.curriculum-container h1 {
+  font-size: 24px;
+}
+
+.header .contact {
+  font-size: 0.8rem;
+  display: flex;
+  gap: 8px;
+}
+
+.header .contact div {
+  display: flex;
+  gap: 2px;
+}
