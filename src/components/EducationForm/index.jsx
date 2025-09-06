@@ -37,6 +37,7 @@ export function EducationForm({ initialData, onSave, onCancel }) {
         value={form.school_name}
         onChange={handleChange}
         placeholder="Havard University"
+        required
       />
       <Input
         id="degree"
@@ -44,6 +45,7 @@ export function EducationForm({ initialData, onSave, onCancel }) {
         value={form.degree}
         onChange={handleChange}
         placeholder="Bachelors in Computer Engineering"
+        required
       />
       <div className="date-section">
         <Input
@@ -62,6 +64,7 @@ export function EducationForm({ initialData, onSave, onCancel }) {
               type="date"
               value={form.end_date}
               onChange={handleChange}
+              required
             />
           )}
           <div className="current-job">
@@ -81,6 +84,7 @@ export function EducationForm({ initialData, onSave, onCancel }) {
         value={form.location}
         onChange={handleChange}
         placeholder="Cambridge, MA"
+        required
       />
 
       <div className="actions">

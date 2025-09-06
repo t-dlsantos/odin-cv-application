@@ -37,6 +37,7 @@ export function ExperienceForm({ initialData, onSave, onCancel }) {
         value={form.company_name}
         onChange={handleChange}
         placeholder="Meta"
+        required
       />
       <Input
         id="position"
@@ -44,6 +45,7 @@ export function ExperienceForm({ initialData, onSave, onCancel }) {
         value={form.position}
         onChange={handleChange}
         placeholder="Software Engineer"
+        required
       />
       <div className="date-section">
         <Input
@@ -52,26 +54,28 @@ export function ExperienceForm({ initialData, onSave, onCancel }) {
           type="date"
           value={form.start_date}
           onChange={handleChange}
+          required
         />
-    
-          {!isCurrentJob && (
-            <Input
-              id="end_date"
-              label="End Date"
-              type="date"
-              value={form.end_date}
-              onChange={handleChange}
-            />
-          )}
-          <div className="current-job">
-            <input
-              type="checkbox"
-              id="end_date"
-              checked={isCurrentJob}
-              onChange={handleCheckboxChange}
-            />
-            <p>Current Job?</p>
-          </div>
+
+        {!isCurrentJob && (
+          <Input
+            id="end_date"
+            label="End Date"
+            type="date"
+            value={form.end_date}
+            onChange={handleChange}
+            required
+          />
+        )}
+        <div className="current-job">
+          <input
+            type="checkbox"
+            id="end_date"
+            checked={isCurrentJob}
+            onChange={handleCheckboxChange}
+          />
+          <p>Current Job?</p>
+        </div>
       </div>
       <Input
         id="location"
@@ -79,19 +83,16 @@ export function ExperienceForm({ initialData, onSave, onCancel }) {
         value={form.location}
         onChange={handleChange}
         placeholder="São Paulo, SP"
+        required
       />
+      <div className="description-area">
+        <p>Description</p>
+        <textarea onChange={handleChange} id="description" cols={70} rows={10} value={form.description} className="description"/>
+      </div>
 
       <div className="actions">
-        <Button
-          onClick={onCancel}
-          text="Cancel"
-        />
-        <Button 
-          text="Save"
-          type="submit"
-          icon={Check}
-          color="#646cff"
-        />
+        <Button onClick={onCancel} text="Cancel" />
+        <Button text="Save" type="submit" icon={Check} color="#646cff" />
       </div>
     </form>
   );

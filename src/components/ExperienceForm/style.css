@@ -26,3 +26,19 @@
   justify-content: center;
   gap: 20px;
 }
+
+.description-area {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 8px;
+}
+
+.description-area p {
+  font-size: 1rem;
+  font-weight: 600;
+}
+
+.description {
+  font-size: 14px;
+}

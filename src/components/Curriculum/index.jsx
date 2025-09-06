@@ -67,6 +67,7 @@ export function Curriculum({ curriculum }) {
                   <div className="right">
                     <p className="name">{exp.company_name}</p>
                     <p>{exp.position}</p>
+                    <p className="description-curriculum">{exp.description}</p>
                   </div>
                 </div>
               ))}

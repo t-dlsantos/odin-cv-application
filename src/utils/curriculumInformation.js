@@ -22,6 +22,7 @@ const loadExample = () => {
         start_date: "2024-03-01",
         end_date: "2025-06-05",
         location: "Alumínio",
+        description: "Automated reports with Python/VBA (4h → 20min, enabling daily updates), built a Power Apps inspection app (structured photos, faster analysis, AI prototype), migrated Excel dashboards to central databases (improved data reliability), and automated transport data extraction (eliminated manual tasks)."
       },
     ],
   };
