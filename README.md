@@ -10,7 +10,7 @@ The main objective was to build a **CV Generator** using React, where users can 
 
 
 ## 🚀 Demo
-👉 [Live Demo Here](https://google.com)  
+👉 [Live Demo Here](https://cv-application-thiago.vercel.app/)  
 
 
 ## 📸 Screenshot
