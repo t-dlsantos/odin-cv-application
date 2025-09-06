@@ -36,12 +36,14 @@ export function EducationForm({ initialData, onSave, onCancel }) {
         label="School"
         value={form.school_name}
         onChange={handleChange}
+        placeholder="Havard University"
       />
       <Input
         id="degree"
         label="Degree"
         value={form.degree}
         onChange={handleChange}
+        placeholder="Bachelors in Computer Engineering"
       />
       <div className="date-section">
         <Input
@@ -50,6 +52,7 @@ export function EducationForm({ initialData, onSave, onCancel }) {
           type="date"
           value={form.start_date}
           onChange={handleChange}
+          required
         />
     
           {!isCurrentJob && (
@@ -77,6 +80,7 @@ export function EducationForm({ initialData, onSave, onCancel }) {
         label="Location"
         value={form.location}
         onChange={handleChange}
+        placeholder="Cambridge, MA"
       />
 
       <div className="actions">
@@ -85,7 +89,7 @@ export function EducationForm({ initialData, onSave, onCancel }) {
           text="Cancel"
         />
         <Button 
-          onClick={onSave}
+          type="submit"
           text="Save"
           icon={Check}
           color="#646cff"

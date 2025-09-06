@@ -22,3 +22,7 @@
 .input:focus {
   border: gray;
 }
+
+.input:invalid {
+  border: 1px solid red;
+}

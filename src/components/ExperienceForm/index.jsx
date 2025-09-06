@@ -36,12 +36,14 @@ export function ExperienceForm({ initialData, onSave, onCancel }) {
         label="Company"
         value={form.company_name}
         onChange={handleChange}
+        placeholder="Meta"
       />
       <Input
         id="position"
         label="Position"
         value={form.position}
         onChange={handleChange}
+        placeholder="Software Engineer"
       />
       <div className="date-section">
         <Input
@@ -76,6 +78,7 @@ export function ExperienceForm({ initialData, onSave, onCancel }) {
         label="Location"
         value={form.location}
         onChange={handleChange}
+        placeholder="São Paulo, SP"
       />
 
       <div className="actions">
@@ -84,8 +87,8 @@ export function ExperienceForm({ initialData, onSave, onCancel }) {
           text="Cancel"
         />
         <Button 
-          onClick={onSave}
           text="Save"
+          type="submit"
           icon={Check}
           color="#646cff"
         />

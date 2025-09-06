@@ -1,8 +1,8 @@
 import "./style.css";
 
-export function Button({ color = "#303030ff", onClick, icon: Icon,  text = ""}) {
+export function Button({ type = "button", color = "#303030ff", onClick, icon: Icon,  text = ""}) {
   return (
-    <button className="button" onClick={onClick} style={{ backgroundColor: color }}>
+    <button className="button" type={type} onClick={onClick} style={{ backgroundColor: color }}>
       {
         Icon !== undefined &&
         <Icon size={18} />
