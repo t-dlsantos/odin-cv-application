@@ -1,12 +1,28 @@
-# React + Vite
+# CV Generator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project was developed as part of **[The Odin Project](https://www.theodinproject.com/)** React curriculum.  
+The main objective was to build a **CV Generator** using React, where users can input their information and instantly preview a structured CV.
 
-Currently, two official plugins are available:
+## ✨ Features
+- 📝 Interactive form to add and edit personal, educational, and professional information  
+- 👀 Real-time CV preview  
+- 📄 Simple and clean layout  
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-## Expanding the ESLint configuration
+## 🚀 Demo
+👉 [Live Demo Here](https://google.com)  
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+
+## 📸 Screenshot
+![alt text](image.png)
+
+
+## 🛠️ Built With
+- ⚛️ [React](https://reactjs.org/)  
+- 🖼️ HTML5  
+- 🎨 CSS3  
+
+
+## 📂 Project Structure
+- **Control Section** – Input forms where the user enters personal, education, and experience details  
+- **Visualization Section** – Displays the CV in a professional layout  
